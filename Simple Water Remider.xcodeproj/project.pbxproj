@@ -1,0 +1,570 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8464812D235D9572006C337F /* Simple Water Remider WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 8464812C235D9572006C337F /* Simple Water Remider WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		84648133235D9572006C337F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84648131235D9572006C337F /* Interface.storyboard */; };
+		84648135235D9574006C337F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84648134235D9574006C337F /* Assets.xcassets */; };
+		8464813C235D9574006C337F /* Simple Water Remider WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8464813B235D9574006C337F /* Simple Water Remider WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		84648141235D9574006C337F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84648140235D9574006C337F /* ContentView.swift */; };
+		84648143235D9574006C337F /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84648142235D9574006C337F /* HostingController.swift */; };
+		84648145235D9574006C337F /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84648144235D9574006C337F /* ExtensionDelegate.swift */; };
+		84648147235D9574006C337F /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84648146235D9574006C337F /* NotificationController.swift */; };
+		84648149235D9574006C337F /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84648148235D9574006C337F /* NotificationView.swift */; };
+		8464814B235D9574006C337F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8464814A235D9574006C337F /* Assets.xcassets */; };
+		8464814E235D9574006C337F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8464814D235D9574006C337F /* Preview Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8464812E235D9572006C337F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84648122235D9572006C337F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8464812B235D9572006C337F;
+			remoteInfo = "Simple Water Remider WatchKit App";
+		};
+		8464813D235D9574006C337F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84648122235D9572006C337F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8464813A235D9574006C337F;
+			remoteInfo = "Simple Water Remider WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		84648156235D9574006C337F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8464813C235D9574006C337F /* Simple Water Remider WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8464815A235D9574006C337F /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				8464812D235D9572006C337F /* Simple Water Remider WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		84648128235D9572006C337F /* Simple Water Remider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Water Remider.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8464812C235D9572006C337F /* Simple Water Remider WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Water Remider WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84648132235D9572006C337F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		84648134235D9574006C337F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84648136235D9574006C337F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8464813B235D9574006C337F /* Simple Water Remider WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Simple Water Remider WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84648140235D9574006C337F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		84648142235D9574006C337F /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		84648144235D9574006C337F /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		84648146235D9574006C337F /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		84648148235D9574006C337F /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		8464814A235D9574006C337F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8464814D235D9574006C337F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8464814F235D9574006C337F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84648150235D9574006C337F /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84648138235D9574006C337F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84648121235D9572006C337F = {
+			isa = PBXGroup;
+			children = (
+				84648130235D9572006C337F /* Simple Water Remider WatchKit App */,
+				8464813F235D9574006C337F /* Simple Water Remider WatchKit Extension */,
+				84648129235D9572006C337F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		84648129235D9572006C337F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84648128235D9572006C337F /* Simple Water Remider.app */,
+				8464812C235D9572006C337F /* Simple Water Remider WatchKit App.app */,
+				8464813B235D9574006C337F /* Simple Water Remider WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84648130235D9572006C337F /* Simple Water Remider WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				84648131235D9572006C337F /* Interface.storyboard */,
+				84648134235D9574006C337F /* Assets.xcassets */,
+				84648136235D9574006C337F /* Info.plist */,
+			);
+			path = "Simple Water Remider WatchKit App";
+			sourceTree = "<group>";
+		};
+		8464813F235D9574006C337F /* Simple Water Remider WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				84648140235D9574006C337F /* ContentView.swift */,
+				84648142235D9574006C337F /* HostingController.swift */,
+				84648144235D9574006C337F /* ExtensionDelegate.swift */,
+				84648146235D9574006C337F /* NotificationController.swift */,
+				84648148235D9574006C337F /* NotificationView.swift */,
+				8464814A235D9574006C337F /* Assets.xcassets */,
+				8464814F235D9574006C337F /* Info.plist */,
+				84648150235D9574006C337F /* PushNotificationPayload.apns */,
+				8464814C235D9574006C337F /* Preview Content */,
+			);
+			path = "Simple Water Remider WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		8464814C235D9574006C337F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8464814D235D9574006C337F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84648127235D9572006C337F /* Simple Water Remider */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8464815B235D9574006C337F /* Build configuration list for PBXNativeTarget "Simple Water Remider" */;
+			buildPhases = (
+				84648126235D9572006C337F /* Resources */,
+				8464815A235D9574006C337F /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8464812F235D9572006C337F /* PBXTargetDependency */,
+			);
+			name = "Simple Water Remider";
+			productName = "Simple Water Remider";
+			productReference = 84648128235D9572006C337F /* Simple Water Remider.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		8464812B235D9572006C337F /* Simple Water Remider WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84648157235D9574006C337F /* Build configuration list for PBXNativeTarget "Simple Water Remider WatchKit App" */;
+			buildPhases = (
+				8464812A235D9572006C337F /* Resources */,
+				84648156235D9574006C337F /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8464813E235D9574006C337F /* PBXTargetDependency */,
+			);
+			name = "Simple Water Remider WatchKit App";
+			productName = "Simple Water Remider WatchKit App";
+			productReference = 8464812C235D9572006C337F /* Simple Water Remider WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		8464813A235D9574006C337F /* Simple Water Remider WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84648153235D9574006C337F /* Build configuration list for PBXNativeTarget "Simple Water Remider WatchKit Extension" */;
+			buildPhases = (
+				84648137235D9574006C337F /* Sources */,
+				84648138235D9574006C337F /* Frameworks */,
+				84648139235D9574006C337F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Simple Water Remider WatchKit Extension";
+			productName = "Simple Water Remider WatchKit Extension";
+			productReference = 8464813B235D9574006C337F /* Simple Water Remider WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84648122235D9572006C337F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = homeland;
+				TargetAttributes = {
+					84648127235D9572006C337F = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					8464812B235D9572006C337F = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					8464813A235D9574006C337F = {
+						CreatedOnToolsVersion = 11.1;
+					};
+				};
+			};
+			buildConfigurationList = 84648125235D9572006C337F /* Build configuration list for PBXProject "Simple Water Remider" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84648121235D9572006C337F;
+			productRefGroup = 84648129235D9572006C337F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84648127235D9572006C337F /* Simple Water Remider */,
+				8464812B235D9572006C337F /* Simple Water Remider WatchKit App */,
+				8464813A235D9574006C337F /* Simple Water Remider WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84648126235D9572006C337F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8464812A235D9572006C337F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84648135235D9574006C337F /* Assets.xcassets in Resources */,
+				84648133235D9572006C337F /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84648139235D9574006C337F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8464814E235D9574006C337F /* Preview Assets.xcassets in Resources */,
+				8464814B235D9574006C337F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84648137235D9574006C337F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84648143235D9574006C337F /* HostingController.swift in Sources */,
+				84648141235D9574006C337F /* ContentView.swift in Sources */,
+				84648147235D9574006C337F /* NotificationController.swift in Sources */,
+				84648145235D9574006C337F /* ExtensionDelegate.swift in Sources */,
+				84648149235D9574006C337F /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8464812F235D9572006C337F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8464812B235D9572006C337F /* Simple Water Remider WatchKit App */;
+			targetProxy = 8464812E235D9572006C337F /* PBXContainerItemProxy */;
+		};
+		8464813E235D9574006C337F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8464813A235D9574006C337F /* Simple Water Remider WatchKit Extension */;
+			targetProxy = 8464813D235D9574006C337F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		84648131235D9572006C337F /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84648132235D9572006C337F /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84648151235D9574006C337F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		84648152235D9574006C337F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84648154235D9574006C337F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Simple Water Remider WatchKit Extension/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Simple Water Remider WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "me.duca.Simple-Water-Remider.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		84648155235D9574006C337F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Simple Water Remider WatchKit Extension/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Simple Water Remider WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "me.duca.Simple-Water-Remider.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
+		84648158235D9574006C337F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				IBSC_MODULE = Simple_Water_Remider_WatchKit_Extension;
+				INFOPLIST_FILE = "Simple Water Remider WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.duca.Simple-Water-Remider.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		84648159235D9574006C337F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				IBSC_MODULE = Simple_Water_Remider_WatchKit_Extension;
+				INFOPLIST_FILE = "Simple Water Remider WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.duca.Simple-Water-Remider.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
+		8464815C235D9574006C337F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.duca.Simple-Water-Remider";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		8464815D235D9574006C337F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.duca.Simple-Water-Remider";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84648125235D9572006C337F /* Build configuration list for PBXProject "Simple Water Remider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84648151235D9574006C337F /* Debug */,
+				84648152235D9574006C337F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84648153235D9574006C337F /* Build configuration list for PBXNativeTarget "Simple Water Remider WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84648154235D9574006C337F /* Debug */,
+				84648155235D9574006C337F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84648157235D9574006C337F /* Build configuration list for PBXNativeTarget "Simple Water Remider WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84648158235D9574006C337F /* Debug */,
+				84648159235D9574006C337F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8464815B235D9574006C337F /* Build configuration list for PBXNativeTarget "Simple Water Remider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8464815C235D9574006C337F /* Debug */,
+				8464815D235D9574006C337F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84648122235D9572006C337F /* Project object */;
+}
