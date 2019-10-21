@@ -18,6 +18,7 @@
 		84648149235D9574006C337F /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84648148235D9574006C337F /* NotificationView.swift */; };
 		8464814B235D9574006C337F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8464814A235D9574006C337F /* Assets.xcassets */; };
 		8464814E235D9574006C337F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8464814D235D9574006C337F /* Preview Assets.xcassets */; };
+		8464815F235DA56B006C337F /* NotificationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8464815E235DA56B006C337F /* NotificationsService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		8464814D235D9574006C337F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8464814F235D9574006C337F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84648150235D9574006C337F /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		8464815E235DA56B006C337F /* NotificationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				8464814F235D9574006C337F /* Info.plist */,
 				84648150235D9574006C337F /* PushNotificationPayload.apns */,
 				8464814C235D9574006C337F /* Preview Content */,
+				8464815E235DA56B006C337F /* NotificationsService.swift */,
 			);
 			path = "Simple Water Remider WatchKit Extension";
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8464815F235DA56B006C337F /* NotificationsService.swift in Sources */,
 				84648143235D9574006C337F /* HostingController.swift in Sources */,
 				84648141235D9574006C337F /* ContentView.swift in Sources */,
 				84648147235D9574006C337F /* NotificationController.swift in Sources */,
@@ -357,6 +361,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -410,6 +415,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -425,6 +431,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Simple Water Remider WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 8PQT65ANW7;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Simple Water Remider WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -448,6 +455,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Simple Water Remider WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 8PQT65ANW7;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Simple Water Remider WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -471,6 +479,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8PQT65ANW7;
 				IBSC_MODULE = Simple_Water_Remider_WatchKit_Extension;
 				INFOPLIST_FILE = "Simple Water Remider WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.duca.Simple-Water-Remider.watchkitapp";
@@ -489,6 +498,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8PQT65ANW7;
 				IBSC_MODULE = Simple_Water_Remider_WatchKit_Extension;
 				INFOPLIST_FILE = "Simple Water Remider WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.duca.Simple-Water-Remider.watchkitapp";
@@ -506,6 +516,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8PQT65ANW7;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.duca.Simple-Water-Remider";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -518,6 +529,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8PQT65ANW7;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.duca.Simple-Water-Remider";
 				PRODUCT_NAME = "$(TARGET_NAME)";
