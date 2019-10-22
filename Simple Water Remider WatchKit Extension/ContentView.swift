@@ -16,7 +16,7 @@ struct ContentView: View
     private let maximumAmount:Float = 5000.0
     
     @State private var selectedAmount:Float = 2000.0
-    @State private var selectedFrequency = 0
+    @State private var selectedFrequency = 2
     
     @State private var selectedHourStart = 7
     @State private var selectedMinStart = 30
@@ -48,12 +48,15 @@ struct ContentView: View
             }
 
             Section {
-                                
-                Picker(selection: $selectedFrequency, label: Text(""))
-                {
-                    ForEach(0 ..< frequencies.count)
+
+                VStack {
+                    Text("Frequency")
+                    Picker(selection: $selectedFrequency, label: Text(""))
                     {
-                        Text("\(self.frequencies[$0])h")
+                        ForEach(0 ..< frequencies.count)
+                        {
+                            Text("\(self.frequencies[$0])h")
+                        }
                     }
                 }
             }
@@ -134,7 +137,7 @@ struct ContentView: View
                                             endMinute: selectedMinEnd,
                                             interval: selectedFrequency)
         
-        notificationService.build(plan)
+        notificationService.schedule(plan)
     }
 }
 

@@ -11,7 +11,7 @@ import UserNotifications
 
 class NotificationsService: NotificationsServiceProtocol
 {
-    func build(_ fromSchedules: [ScheduleProtocol])
+    func schedule(_ fromSchedules: [ScheduleProtocol])
     {
         fromSchedules.forEach { (schedule) in
             
@@ -64,7 +64,7 @@ extension UNNotificationRequest
 
 protocol NotificationsServiceProtocol
 {
-    func build(_ fromSchedule: [ScheduleProtocol])
+    func schedule(_ fromSchedule: [ScheduleProtocol])
     func requestAuthorization()
 }
 
