@@ -130,15 +130,17 @@ struct ContentView: View
     
     private func createNotifications()
     {
-        let plan = plannerService.buildPlan(amount: selectedAmount,
+        let plan = plannerService.buildPlan(totalAmountInMl: selectedAmount,
                                             startHour: selectedHourStart,
                                             startMinute: selectedMinStart,
                                             endHour: selectedHourEnd,
                                             endMinute: selectedMinEnd,
-                                            interval: selectedFrequency)
+                                            intervalInMinutes: selectedFrequency*60)
         
         notificationService.schedule(plan)
     }
+    
+    
 }
 
 struct ContentView_Previews: PreviewProvider

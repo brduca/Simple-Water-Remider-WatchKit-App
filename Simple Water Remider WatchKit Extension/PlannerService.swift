@@ -10,17 +10,17 @@ import Foundation
 
 class PlannerService: PlannerServiceProtocol
 {
-    func buildPlan(amount: Float, startHour: Int, startMinute: Int, endHour: Int, endMinute: Int, interval: Int) -> [ScheduleProtocol]
+    func buildPlan(totalAmountInMl: Float, startHour: Int, startMinute: Int, endHour: Int, endMinute: Int, intervalInMinutes: Int) -> [ScheduleProtocol]
     {
         var result:[ScheduleProtocol] = []
         
         let totalTimeSpanInMin = (endHour * 60 + endMinute) - (startHour * 60 - startMinute)
-        let numberOfTimes = totalTimeSpanInMin/interval
-        let dose = amount/Float(numberOfTimes)
+        let numberOfTimes = totalTimeSpanInMin/intervalInMinutes
+        let amount = totalAmountInMl/Float(numberOfTimes)
                             
         for i in 0...numberOfTimes
         {
-            let schedule = Schedule(amount: dose, hour: startHour, min: startMinute)
+            let schedule = Schedule(amount: amount, hour: startHour, min: startMinute)
             result.append(schedule)
         }
         
@@ -30,5 +30,5 @@ class PlannerService: PlannerServiceProtocol
 
 protocol PlannerServiceProtocol
 {
-    func buildPlan(amount: Float, startHour: Int, startMinute: Int, endHour: Int, endMinute: Int, interval: Int) -> [ScheduleProtocol]
+    func buildPlan(totalAmountInMl: Float, startHour: Int, startMinute: Int, endHour: Int, endMinute: Int, intervalInMinutes: Int) -> [ScheduleProtocol]
 }

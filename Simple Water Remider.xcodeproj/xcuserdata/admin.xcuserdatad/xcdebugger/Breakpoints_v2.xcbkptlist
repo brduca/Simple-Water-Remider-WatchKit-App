@@ -23,7 +23,23 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "06C2921C-ED6C-440C-84CE-C975FD2A5502"
+            uuid = "6C060160-3DB2-4C48-B682-D3A47BF1F78D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Simple Water Remider WatchKit Extension/PlannerService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "buildPlan(totalAmountInMl:startHour:startMinute:endHour:endMinute:intervalInMinutes:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "84B91096-D75F-46C5-96F5-037274FA703C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -32,23 +48,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
             endingLineNumber = "27"
-            landmarkName = "buildPlan(amount:startHour:startMinute:endHour:endMinute:interval:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6070BD05-F7EF-4EDF-9847-F2DFD81CF31C"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Simple Water Remider WatchKit Extension/PlannerService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "buildPlan(amount:startHour:startMinute:endHour:endMinute:interval:)"
+            landmarkName = "buildPlan(totalAmountInMl:startHour:startMinute:endHour:endMinute:intervalInMinutes:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
