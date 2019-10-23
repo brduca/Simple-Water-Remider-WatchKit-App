@@ -10,9 +10,9 @@ import Foundation
 
 class PlannerService: PlannerServiceProtocol
 {
-    func buildPlan(totalAmountInMl: Float, startHour: Int, startMinute: Int, endHour: Int, endMinute: Int, intervalInMinutes: Int) -> [ScheduleProtocol]
+    func buildPlan(totalAmountInMl: Float, startHour: Int, startMinute: Int, endHour: Int, endMinute: Int, intervalInMinutes: Int) -> [Schedule]
     {
-        var result:[ScheduleProtocol] = []
+        var result:[Schedule] = []
         
         let initialTime  = startHour.toMinutes() + startMinute
         let finalTime = endHour.toMinutes() + endMinute
@@ -23,7 +23,7 @@ class PlannerService: PlannerServiceProtocol
         for i in 0...numberOfTimes
         {
             let time = initialTime + (intervalInMinutes * i)
-            let schedule = Schedule(amount: amount, hour: time.inHours(), min: time.inMintutes())
+            let schedule = Schedule(amount: amount, hours: time.inHours(), minutes: time.inMintutes())
             result.append(schedule)
         }
         
@@ -51,5 +51,5 @@ extension Int
 
 protocol PlannerServiceProtocol
 {
-    func buildPlan(totalAmountInMl: Float, startHour: Int, startMinute: Int, endHour: Int, endMinute: Int, intervalInMinutes: Int) -> [ScheduleProtocol]
+    func buildPlan(totalAmountInMl: Float, startHour: Int, startMinute: Int, endHour: Int, endMinute: Int, intervalInMinutes: Int) -> [Schedule]
 }

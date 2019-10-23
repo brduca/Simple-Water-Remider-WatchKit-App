@@ -11,14 +11,14 @@ import UserNotifications
 
 class NotificationsService: NotificationsServiceProtocol
 {
-    func schedule(_ fromSchedules: [ScheduleProtocol])
+    func schedule(_ fromSchedules: [Schedule])
     {
         fromSchedules.forEach { (schedule) in
             
             create(title: "[Drink water]",
                    body: "[Drink \(schedule.amount) amount now!!!]",
-                   hour: schedule.hour,
-                   minute: schedule.min).schedule()
+                   hour: schedule.hours,
+                   minute: schedule.minutes).schedule()
         }
     }
     
@@ -69,7 +69,7 @@ extension UNNotificationRequest
 
 protocol NotificationsServiceProtocol
 {
-    func schedule(_ fromSchedule: [ScheduleProtocol])
+    func schedule(_ fromSchedule: [Schedule])
     func requestAuthorization()
     func cancelNotifications()
 }

@@ -20,7 +20,7 @@ struct ContentView: View
     
     @State private var selectedHourStart = 7
     @State private var selectedMinStart = 30
-
+    
     @State private var selectedHourEnd = 23
     @State private var selectedMinEnd = 0
     
@@ -37,7 +37,6 @@ struct ContentView: View
     }
     
     var body: some View {
-        
         Form {
             Section {
                 
@@ -47,9 +46,9 @@ struct ContentView: View
                     Text("\(Int(selectedAmount.rounded()))")
                 }
             }
-
+            
             Section {
-
+                
                 VStack {
                     Text("Frequency")
                     Picker(selection: $selectedFrequency, label: Text(""))
@@ -90,55 +89,50 @@ struct ContentView: View
             }
             
             Section {
-                           
-                           VStack  {
-                               
-                               Text("Ending at")
-                               
-                               HStack {
-                                   
-                                   Picker(selection: $selectedHourEnd, label: Text(""))
-                                   {
-                                       ForEach(1 ..< 24)
-                                       {
-                                           Text("\($0)h")
-                                       }
-                                   }
-                                   
-                                   Picker(selection: $selectedMinEnd, label: Text(""))
-                                   {
-                                       ForEach(0 ..< 60)
-                                       {
-                                           Text("\($0)m")
-                                       }
-                                   }
-                               }
-                           }
-                       }
+                
+                VStack  {
+                    
+                    Text("Ending at")
+                    
+                    HStack {
+                        
+                        Picker(selection: $selectedHourEnd, label: Text(""))
+                        {
+                            ForEach(1 ..< 24)
+                            {
+                                Text("\($0)h")
+                            }
+                        }
+                        
+                        Picker(selection: $selectedMinEnd, label: Text(""))
+                        {
+                            ForEach(0 ..< 60)
+                            {
+                                Text("\($0)m")
+                            }
+                        }
+                    }
+                }
+            }
             
             Section {
-                
-                Button(action:
-                {
-                    self.createNotifications()
-                    
-                }) {
+                NavigationLink(destination: ConfirmationView(plan: createNotifications())) {
                     Text("[Remind me!]")
                 }
             }
         }
     }
     
-    private func createNotifications()
+    private func createNotifications() -> [Schedule]
     {
-        let plan = plannerService.buildPlan(totalAmountInMl: selectedAmount,
-                                            startHour: selectedHourStart,
-                                            startMinute: selectedMinStart,
-                                            endHour: selectedHourEnd,
-                                            endMinute: selectedMinEnd,
-                                            intervalInMinutes: selectedFrequency*60)
+        return plannerService.buildPlan(totalAmountInMl: selectedAmount,
+                                        startHour: selectedHourStart,
+                                        startMinute: selectedMinStart,
+                                        endHour: selectedHourEnd,
+                                        endMinute: selectedMinEnd,
+                                        intervalInMinutes: selectedFrequency*60)
         
-        notificationService.schedule(plan)
+        // notificationService.schedule(plan)
     }
     
     

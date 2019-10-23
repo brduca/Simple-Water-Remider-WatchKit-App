@@ -8,16 +8,28 @@
 
 import Foundation
 
-struct Schedule: ScheduleProtocol
-{
+class Schedule: ScheduleProtocol
+{ 
     var amount: Float
-    var hour: Int
-    var min: Int
+    var hours: Int
+    var minutes: Int
+    
+    init(amount: Float, hours: Int, minutes:Int)
+    {
+        self.amount = amount
+        self.hours = hours
+        self.minutes = minutes
+    }
+}
+
+extension Schedule: Identifiable
+{
+    var id: ObjectIdentifier { ObjectIdentifier(self) }
 }
 
 protocol ScheduleProtocol
 {
     var amount: Float { get set }
-    var hour: Int { get set }
-    var min: Int { get set }
+    var hours: Int { get set }
+    var minutes: Int { get set }
 }

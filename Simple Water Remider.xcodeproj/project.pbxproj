@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8449EEAC235F02BE00CDCCAB /* PlannerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8449EEAB235F02BE00CDCCAB /* PlannerService.swift */; };
 		8449EEAE235F0E9900CDCCAB /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8449EEAD235F0E9900CDCCAB /* Schedule.swift */; };
+		8449EEBB2360843400CDCCAB /* ConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8449EEBA2360843400CDCCAB /* ConfirmationView.swift */; };
 		8464812D235D9572006C337F /* Simple Water Remider WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 8464812C235D9572006C337F /* Simple Water Remider WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		84648133235D9572006C337F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84648131235D9572006C337F /* Interface.storyboard */; };
 		84648135235D9574006C337F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84648134235D9574006C337F /* Assets.xcassets */; };
@@ -68,6 +69,7 @@
 /* Begin PBXFileReference section */
 		8449EEAB235F02BE00CDCCAB /* PlannerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerService.swift; sourceTree = "<group>"; };
 		8449EEAD235F0E9900CDCCAB /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		8449EEBA2360843400CDCCAB /* ConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationView.swift; sourceTree = "<group>"; };
 		84648128235D9572006C337F /* Simple Water Remider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Water Remider.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8464812C235D9572006C337F /* Simple Water Remider WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Water Remider WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84648132235D9572006C337F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				8464815E235DA56B006C337F /* NotificationsService.swift */,
 				8449EEAB235F02BE00CDCCAB /* PlannerService.swift */,
 				8449EEAD235F0E9900CDCCAB /* Schedule.swift */,
+				8449EEBA2360843400CDCCAB /* ConfirmationView.swift */,
 			);
 			path = "Simple Water Remider WatchKit Extension";
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				84648147235D9574006C337F /* NotificationController.swift in Sources */,
 				84648145235D9574006C337F /* ExtensionDelegate.swift in Sources */,
 				8449EEAE235F0E9900CDCCAB /* Schedule.swift in Sources */,
+				8449EEBB2360843400CDCCAB /* ConfirmationView.swift in Sources */,
 				84648149235D9574006C337F /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
