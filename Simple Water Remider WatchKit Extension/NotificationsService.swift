@@ -50,6 +50,11 @@ class NotificationsService: NotificationsServiceProtocol
             }
         }
     }
+    
+    func cancelNotifications()
+    {
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+    }
 }
 
 extension UNNotificationRequest
@@ -66,5 +71,6 @@ protocol NotificationsServiceProtocol
 {
     func schedule(_ fromSchedule: [ScheduleProtocol])
     func requestAuthorization()
+    func cancelNotifications()
 }
 

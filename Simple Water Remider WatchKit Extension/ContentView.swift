@@ -33,6 +33,7 @@ struct ContentView: View
         self.notificationService = notificationService
         self.plannerService = plannerService
         notificationService.requestAuthorization()
+        notificationService.cancelNotifications()
     }
     
     var body: some View {
