@@ -10,11 +10,11 @@ import SwiftUI
 
 struct ConfirmationView:View
 {
-    var plan: [Schedule]
+    var viewModel: ConfirmationViewModelProtocol
     
-    init(plan: [Schedule])
+    init(viewModel:ConfirmationViewModelProtocol)
     {
-        self.plan = plan
+        self.viewModel = viewModel
     }
     
     var body: some View
@@ -22,14 +22,14 @@ struct ConfirmationView:View
         Form {
             
             Section {
-                List(plan) { schedule  in
+                List(self.viewModel.plan) { schedule  in
                     ScheduleRow(schedule: schedule)
                 }
             }
             
             Section {
                 Button(action: {
-                    // self.settings.score += 1
+                    self.viewModel.confirm()
                 }) {
                     Text("[Schedule]")
                 }

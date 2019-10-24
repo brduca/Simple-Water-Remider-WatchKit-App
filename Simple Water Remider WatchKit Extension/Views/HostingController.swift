@@ -14,8 +14,9 @@ class HostingController: WKHostingController<ContentView>
 {
     override var body: ContentView
     {
-        return ContentView(notificationService: NotificationsService(),
-                           plannerService: PlannerService(),
-                           applicationSettings: ApplicationSettings.shared)
+        return ContentView(viewModel: ContentViewModel(notificationService: NotificationsService(),
+                                                       plannerService: PlannerService(),
+                                                       applicationSettings: ApplicationSettings.shared)
+        )
     }
 }

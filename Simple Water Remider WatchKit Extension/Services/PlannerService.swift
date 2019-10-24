@@ -23,7 +23,7 @@ class PlannerService: PlannerServiceProtocol
         let numberOfTimes = totalTimeSpanInMin/intervalInMinutes
         let amount = totalAmountInMl/Float(numberOfTimes)
                             
-        for i in 0...numberOfTimes
+        for i in 0..<numberOfTimes
         {
             let time = initialTime + (intervalInMinutes * i)
             let schedule = Schedule(amount: amount, hours: time.inHours(), minutes: time.inMintutes())

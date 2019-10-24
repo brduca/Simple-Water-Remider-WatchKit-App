@@ -25,6 +25,8 @@
 		8464814B235D9574006C337F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8464814A235D9574006C337F /* Assets.xcassets */; };
 		8464814E235D9574006C337F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8464814D235D9574006C337F /* Preview Assets.xcassets */; };
 		8464815F235DA56B006C337F /* NotificationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8464815E235DA56B006C337F /* NotificationsService.swift */; };
+		84E9A8832361D3C500D46D6D /* ConfirmationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E9A8822361D3C500D46D6D /* ConfirmationViewModel.swift */; };
+		84E9A8852361D5D600D46D6D /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E9A8842361D5D600D46D6D /* ContentViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +94,8 @@
 		8464814F235D9574006C337F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84648150235D9574006C337F /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		8464815E235DA56B006C337F /* NotificationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsService.swift; sourceTree = "<group>"; };
+		84E9A8822361D3C500D46D6D /* ConfirmationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewModel.swift; sourceTree = "<group>"; };
+		84E9A8842361D5D600D46D6D /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +196,7 @@
 				8463E60A236195070098D185 /* Assets */,
 				8463E605236192DF0098D185 /* Extensions */,
 				8463E609236193A20098D185 /* Services */,
+				84E9A8812361D39F00D46D6D /* ViewModels */,
 				8463E608236193780098D185 /* Views */,
 			);
 			path = "Simple Water Remider WatchKit Extension";
@@ -203,6 +208,15 @@
 				8464814D235D9574006C337F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		84E9A8812361D39F00D46D6D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				84E9A8822361D3C500D46D6D /* ConfirmationViewModel.swift */,
+				84E9A8842361D5D600D46D6D /* ContentViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8464815F235DA56B006C337F /* NotificationsService.swift in Sources */,
+				84E9A8832361D3C500D46D6D /* ConfirmationViewModel.swift in Sources */,
 				84648143235D9574006C337F /* HostingController.swift in Sources */,
 				8449EEAC235F02BE00CDCCAB /* PlannerService.swift in Sources */,
 				84648141235D9574006C337F /* ContentView.swift in Sources */,
@@ -342,6 +357,7 @@
 				8463E607236192F80098D185 /* TimeFormater.swift in Sources */,
 				84648145235D9574006C337F /* ExtensionDelegate.swift in Sources */,
 				8449EEAE235F0E9900CDCCAB /* Schedule.swift in Sources */,
+				84E9A8852361D5D600D46D6D /* ContentViewModel.swift in Sources */,
 				8449EEBB2360843400CDCCAB /* ConfirmationView.swift in Sources */,
 				84648149235D9574006C337F /* NotificationView.swift in Sources */,
 				8463E604236191E50098D185 /* ApplicationSettings.swift in Sources */,

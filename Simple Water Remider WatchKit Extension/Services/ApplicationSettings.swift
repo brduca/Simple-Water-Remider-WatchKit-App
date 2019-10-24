@@ -16,6 +16,7 @@ class ApplicationSettings: ApplicationSettingsProtocol
     let frequencies = [2, 3, 4, 5]
     let minimumAmount:Float = 1000.0
     let maximumAmount:Float = 5000.0
+    let stepSize:Float = 500.0
 }
 
 protocol ApplicationSettingsProtocol
@@ -23,4 +24,5 @@ protocol ApplicationSettingsProtocol
     var frequencies: [Int] { get }
     var minimumAmount:Float { get }
     var maximumAmount:Float { get }
+    var stepSize:Float { get }
 }
