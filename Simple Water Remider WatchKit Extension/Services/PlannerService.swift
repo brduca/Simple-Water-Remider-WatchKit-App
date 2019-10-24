@@ -17,6 +17,9 @@ class PlannerService: PlannerServiceProtocol
         let initialTime  = startHour.toMinutes() + startMinute
         let finalTime = endHour.toMinutes() + endMinute
         let totalTimeSpanInMin = finalTime - initialTime
+        
+        guard totalTimeSpanInMin > 0, intervalInMinutes > 0 else { return [] } // TODO: proper validation
+        
         let numberOfTimes = totalTimeSpanInMin/intervalInMinutes
         let amount = totalAmountInMl/Float(numberOfTimes)
                             

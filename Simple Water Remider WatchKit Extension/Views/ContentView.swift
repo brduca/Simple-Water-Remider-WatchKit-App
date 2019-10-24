@@ -64,12 +64,12 @@ struct ContentView: View
                     Text("[Starting at]")
                     HStack {
                         Picker(selection: $selectedHourStart, label: Text("")) {
-                            ForEach(1 ..< 24) {
+                            ForEach(0..<23) {
                                 Text("\($0)h")
                             }
                         }
                         Picker(selection: $selectedMinStart, label: Text("")) {
-                            ForEach(0 ..< 60) {
+                            ForEach(0..<60) {
                                 Text("\($0)m")
                             }
                         }
@@ -83,12 +83,12 @@ struct ContentView: View
                     Text("[Ending at]")
                     HStack {
                         Picker(selection: $selectedHourEnd, label: Text("")) {
-                            ForEach(1 ..< 24) {
+                            ForEach(0..<23) {
                                 Text("\($0)h")
                             }
                         }
                         Picker(selection: $selectedMinEnd, label: Text("")) {
-                            ForEach(0 ..< 60) {
+                            ForEach(0..<60) {
                                 Text("\($0)m")
                             }
                         }
@@ -117,7 +117,7 @@ struct ContentView: View
                                         startMinute: selectedMinStart,
                                         endHour: selectedHourEnd,
                                         endMinute: selectedMinEnd,
-                                        intervalInMinutes: selectedFrequency*60)
+                                        intervalInMinutes: applicationSettings.frequencies[selectedFrequency]*60)
         
         // notificationService.schedule(plan)
     }
