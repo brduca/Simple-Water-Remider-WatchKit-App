@@ -31,23 +31,6 @@ class PlannerService: PlannerServiceProtocol
     }
 }
 
-extension Int
-{
-    func inHours() -> Int
-    {
-        return Int(self/60)
-    }
-    
-    func inMintutes() -> Int
-    {
-        return self % 60
-    }
-    
-    func toMinutes() -> Int
-    {
-        return self*60
-    }
-}
 
 protocol PlannerServiceProtocol
 {

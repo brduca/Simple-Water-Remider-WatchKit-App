@@ -9,29 +9,28 @@
 import SwiftUI
 
 struct ContentView: View
-{
-    private let frequencies = [2, 3, 4, 5]
-    
-    private let minimumAmount:Float = 1000.0
-    private let maximumAmount:Float = 5000.0
-    
+{    
     @State private var selectedAmount:Float = 2000.0
     @State private var selectedFrequency = 2
-    
     @State private var selectedHourStart = 7
     @State private var selectedMinStart = 30
-    
     @State private var selectedHourEnd = 23
     @State private var selectedMinEnd = 0
+    @State private var pushActive = false
+    @State private var plan: [Schedule] = []
     
     private let notificationService: NotificationsServiceProtocol
     private let plannerService: PlannerServiceProtocol
-    
+    private let applicationSettings: ApplicationSettingsProtocol
+        
     init(notificationService: NotificationsServiceProtocol,
-         plannerService: PlannerServiceProtocol)
+         plannerService: PlannerServiceProtocol,
+         applicationSettings: ApplicationSettingsProtocol)
     {
         self.notificationService = notificationService
         self.plannerService = plannerService
+        self.applicationSettings = applicationSettings
+        
         notificationService.requestAuthorization()
         notificationService.cancelNotifications()
     }
@@ -41,8 +40,8 @@ struct ContentView: View
             Section {
                 
                 VStack {
-                    Text("Amount (ml)")
-                    Slider(value: $selectedAmount, in: minimumAmount...maximumAmount)
+                    Text("[Amount (ml)]")
+                    Slider(value: $selectedAmount, in: applicationSettings.minimumAmount...applicationSettings.maximumAmount, step: Float(500.0))
                     Text("\(Int(selectedAmount.rounded()))")
                 }
             }
@@ -50,12 +49,10 @@ struct ContentView: View
             Section {
                 
                 VStack {
-                    Text("Frequency")
-                    Picker(selection: $selectedFrequency, label: Text(""))
-                    {
-                        ForEach(0 ..< frequencies.count)
-                        {
-                            Text("\(self.frequencies[$0])h")
+                    Text("[Frequency]")
+                    Picker(selection: $selectedFrequency, label: Text("")) {
+                        ForEach(0 ..< applicationSettings.frequencies.count) {
+                            Text("\(self.applicationSettings.frequencies[$0])h")
                         }
                     }
                 }
@@ -64,23 +61,15 @@ struct ContentView: View
             Section {
                 
                 VStack  {
-                    
-                    Text("Starting at")
-                    
+                    Text("[Starting at]")
                     HStack {
-                        
-                        Picker(selection: $selectedHourStart, label: Text(""))
-                        {
-                            ForEach(1 ..< 24)
-                            {
+                        Picker(selection: $selectedHourStart, label: Text("")) {
+                            ForEach(1 ..< 24) {
                                 Text("\($0)h")
                             }
                         }
-                        
-                        Picker(selection: $selectedMinStart, label: Text(""))
-                        {
-                            ForEach(0 ..< 60)
-                            {
+                        Picker(selection: $selectedMinStart, label: Text("")) {
+                            ForEach(0 ..< 60) {
                                 Text("\($0)m")
                             }
                         }
@@ -91,23 +80,15 @@ struct ContentView: View
             Section {
                 
                 VStack  {
-                    
-                    Text("Ending at")
-                    
+                    Text("[Ending at]")
                     HStack {
-                        
-                        Picker(selection: $selectedHourEnd, label: Text(""))
-                        {
-                            ForEach(1 ..< 24)
-                            {
+                        Picker(selection: $selectedHourEnd, label: Text("")) {
+                            ForEach(1 ..< 24) {
                                 Text("\($0)h")
                             }
                         }
-                        
-                        Picker(selection: $selectedMinEnd, label: Text(""))
-                        {
-                            ForEach(0 ..< 60)
-                            {
+                        Picker(selection: $selectedMinEnd, label: Text("")) {
+                            ForEach(0 ..< 60) {
                                 Text("\($0)m")
                             }
                         }
@@ -116,9 +97,15 @@ struct ContentView: View
             }
             
             Section {
-                NavigationLink(destination: ConfirmationView(plan: createNotifications())) {
-                    Text("[Remind me!]")
-                }
+               
+                Button(action: {
+                    
+                    self.plan = self.createNotifications()
+                    self.pushActive = true
+                    
+                }) { Text("[Remind me!]") }
+                
+                NavigationLink(destination: ConfirmationView(plan: self.plan), isActive: $pushActive) { Text("") }.hidden()
             }
         }
     }
@@ -134,8 +121,6 @@ struct ContentView: View
         
         // notificationService.schedule(plan)
     }
-    
-    
 }
 
 struct ContentView_Previews: PreviewProvider
@@ -143,6 +128,7 @@ struct ContentView_Previews: PreviewProvider
     static var previews: some View
     {
         ContentView(notificationService: NotificationsService(),
-                    plannerService: PlannerService())
+                    plannerService: PlannerService(),
+                    applicationSettings: ApplicationSettings.shared)
     }
 }

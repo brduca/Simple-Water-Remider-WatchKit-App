@@ -10,6 +10,9 @@
 		8449EEAC235F02BE00CDCCAB /* PlannerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8449EEAB235F02BE00CDCCAB /* PlannerService.swift */; };
 		8449EEAE235F0E9900CDCCAB /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8449EEAD235F0E9900CDCCAB /* Schedule.swift */; };
 		8449EEBB2360843400CDCCAB /* ConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8449EEBA2360843400CDCCAB /* ConfirmationView.swift */; };
+		8463E604236191E50098D185 /* ApplicationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463E603236191E50098D185 /* ApplicationSettings.swift */; };
+		8463E607236192F80098D185 /* TimeFormater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463E606236192F80098D185 /* TimeFormater.swift */; };
+		8463E60D2361983E0098D185 /* ScheduleRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463E60C2361983E0098D185 /* ScheduleRow.swift */; };
 		8464812D235D9572006C337F /* Simple Water Remider WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 8464812C235D9572006C337F /* Simple Water Remider WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		84648133235D9572006C337F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84648131235D9572006C337F /* Interface.storyboard */; };
 		84648135235D9574006C337F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84648134235D9574006C337F /* Assets.xcassets */; };
@@ -70,6 +73,9 @@
 		8449EEAB235F02BE00CDCCAB /* PlannerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerService.swift; sourceTree = "<group>"; };
 		8449EEAD235F0E9900CDCCAB /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		8449EEBA2360843400CDCCAB /* ConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationView.swift; sourceTree = "<group>"; };
+		8463E603236191E50098D185 /* ApplicationSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationSettings.swift; sourceTree = "<group>"; };
+		8463E606236192F80098D185 /* TimeFormater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormater.swift; sourceTree = "<group>"; };
+		8463E60C2361983E0098D185 /* ScheduleRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleRow.swift; sourceTree = "<group>"; };
 		84648128235D9572006C337F /* Simple Water Remider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Water Remider.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8464812C235D9572006C337F /* Simple Water Remider WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Water Remider WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84648132235D9572006C337F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -99,6 +105,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8463E605236192DF0098D185 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8463E606236192F80098D185 /* TimeFormater.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8463E608236193780098D185 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8463E60B2361982C0098D185 /* Rows */,
+				84648140235D9574006C337F /* ContentView.swift */,
+				84648142235D9574006C337F /* HostingController.swift */,
+				84648148235D9574006C337F /* NotificationView.swift */,
+				8449EEBA2360843400CDCCAB /* ConfirmationView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8463E609236193A20098D185 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8463E603236191E50098D185 /* ApplicationSettings.swift */,
+				8449EEAD235F0E9900CDCCAB /* Schedule.swift */,
+				8449EEAB235F02BE00CDCCAB /* PlannerService.swift */,
+				8464815E235DA56B006C337F /* NotificationsService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8463E60A236195070098D185 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				8464814C235D9574006C337F /* Preview Content */,
+				8464814A235D9574006C337F /* Assets.xcassets */,
+				84648150235D9574006C337F /* PushNotificationPayload.apns */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		8463E60B2361982C0098D185 /* Rows */ = {
+			isa = PBXGroup;
+			children = (
+				8463E60C2361983E0098D185 /* ScheduleRow.swift */,
+			);
+			path = Rows;
+			sourceTree = "<group>";
+		};
 		84648121235D9572006C337F = {
 			isa = PBXGroup;
 			children = (
@@ -131,19 +186,13 @@
 		8464813F235D9574006C337F /* Simple Water Remider WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				84648140235D9574006C337F /* ContentView.swift */,
-				84648142235D9574006C337F /* HostingController.swift */,
+				8464814F235D9574006C337F /* Info.plist */,
 				84648144235D9574006C337F /* ExtensionDelegate.swift */,
 				84648146235D9574006C337F /* NotificationController.swift */,
-				84648148235D9574006C337F /* NotificationView.swift */,
-				8464814A235D9574006C337F /* Assets.xcassets */,
-				8464814F235D9574006C337F /* Info.plist */,
-				84648150235D9574006C337F /* PushNotificationPayload.apns */,
-				8464814C235D9574006C337F /* Preview Content */,
-				8464815E235DA56B006C337F /* NotificationsService.swift */,
-				8449EEAB235F02BE00CDCCAB /* PlannerService.swift */,
-				8449EEAD235F0E9900CDCCAB /* Schedule.swift */,
-				8449EEBA2360843400CDCCAB /* ConfirmationView.swift */,
+				8463E60A236195070098D185 /* Assets */,
+				8463E605236192DF0098D185 /* Extensions */,
+				8463E609236193A20098D185 /* Services */,
+				8463E608236193780098D185 /* Views */,
 			);
 			path = "Simple Water Remider WatchKit Extension";
 			sourceTree = "<group>";
@@ -289,10 +338,13 @@
 				8449EEAC235F02BE00CDCCAB /* PlannerService.swift in Sources */,
 				84648141235D9574006C337F /* ContentView.swift in Sources */,
 				84648147235D9574006C337F /* NotificationController.swift in Sources */,
+				8463E60D2361983E0098D185 /* ScheduleRow.swift in Sources */,
+				8463E607236192F80098D185 /* TimeFormater.swift in Sources */,
 				84648145235D9574006C337F /* ExtensionDelegate.swift in Sources */,
 				8449EEAE235F0E9900CDCCAB /* Schedule.swift in Sources */,
 				8449EEBB2360843400CDCCAB /* ConfirmationView.swift in Sources */,
 				84648149235D9574006C337F /* NotificationView.swift in Sources */,
+				8463E604236191E50098D185 /* ApplicationSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,7 +494,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Simple Water Remider WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Simple Water Remider WatchKit Extension/Assets/Preview Content\"";
 				DEVELOPMENT_TEAM = 8PQT65ANW7;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Simple Water Remider WatchKit Extension/Info.plist";
@@ -466,7 +518,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Simple Water Remider WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Simple Water Remider WatchKit Extension/Assets/Preview Content\"";
 				DEVELOPMENT_TEAM = 8PQT65ANW7;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Simple Water Remider WatchKit Extension/Info.plist";

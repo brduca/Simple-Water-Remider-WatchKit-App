@@ -19,19 +19,21 @@ struct ConfirmationView:View
     
     var body: some View
     {
-        return List(plan) { schedule  in
+        Form {
             
-            ScheduleRow(schedule: schedule)
+            Section {
+                List(plan) { schedule  in
+                    ScheduleRow(schedule: schedule)
+                }
+            }
+            
+            Section {
+                Button(action: {
+                    // self.settings.score += 1
+                }) {
+                    Text("[Schedule]")
+                }
+            }
         }
-    }
-}
-
-struct ScheduleRow: View
-{
-    var schedule: Schedule
-    
-    var body: some View
-    {
-        Text("Drink \(schedule.amount) at \(schedule.hours):\(schedule.minutes)")
     }
 }
