@@ -2,7 +2,7 @@
 //  Schedule.swift
 //  Simple Water Remider WatchKit Extension
 //
-//  Created by Admin on 22/10/2019.
+//  Created by Salvador Mósca on 22/10/2019.
 //  Copyright © 2019 homeland. All rights reserved.
 //
 
